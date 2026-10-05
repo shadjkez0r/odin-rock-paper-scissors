@@ -1,0 +1,87 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f7f7f7;
+    color: #1a1a1a;
+}
+
+.content {
+    max-width: 960px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрируем все этажи */
+    gap: 50px; /* Расстояние между этажами */
+    padding: 20px;
+}
+
+/* === ЭТАЖ 2: ТАБЛО СО СЧЕТОМ === */
+.content__menu {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+}
+
+.content__human-score, .content__computer-score {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрируем звезды под заголовками */
+}
+
+.score__human-stars, .score__computer-stars {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/* === ЭТАЖ 3: КНОПКИ === */
+.content__game-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.content__pick {
+    display: flex;
+    gap: 50px; /* Расстояние между камнем, ножницами и бумагой */
+}
+
+/* Стили для самих кнопок-иконок */
+.content__pick > div {
+    cursor: pointer; /* Делает курсор как кликабельную ссылку */
+    padding: 25px;
+    border: 3px solid #1a1a1a;
+    border-radius: 15px;
+    transition: all 0.2s ease-in-out; /* Плавная анимация */
+    background-color: white;
+}
+
+/* Эффект при наведении на кнопку */
+.content__pick > div:hover {
+    background-color: #1a1a1a;
+    color: white;
+    transform: scale(1.1); /* Кнопка слегка увеличивается */
+}
+
+/* Задаем размер для SVG иконок камня/ножниц/бумаги */
+.content__pick svg {
+    width: 80px;
+    height: 80px;
+}
+
+/* Размер звездочек в счете */
+.score__human-stars svg, .score__computer-stars svg {
+    width: 35px;
+    height: 35px;
+}
